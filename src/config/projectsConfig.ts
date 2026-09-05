@@ -33,7 +33,7 @@ export const projects: Project[] = [
 	{
 		name: "乌鹊南飞 · 个人站",
 		description: "本网站。基于 Astro / Firefly 主题二改的个人世界，作品、文章与创作都会沉淀在这里。",
-		icon: "material-symbols:web",
+		icon: "material-symbols:article-rounded",
 		githubUrl: "https://github.com/qiao23333/qiaozt-",
 		accent: "#06b6d4",
 		tags: ["网站", "Astro", "内容"],

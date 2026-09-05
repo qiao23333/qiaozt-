@@ -53,11 +53,11 @@ export async function GET(context: APIContext): Promise<Response> {
 	return rss({
 		title: siteConfig.title,
 		description: siteConfig.subtitle || "No description",
-		site: context.site ?? "http://rainzt.cn",
-		customData: `<templateTheme>Aemeath</templateTheme>
-		<templateThemeVersion>${pkg.version}</templateThemeVersion>
-		<templateThemeUrl>https://rainzt.cn/</templateThemeUrl>
-		<lastBuildDate>${formatDateI18nWithTime(new Date())}</lastBuildDate>`,
+		site: context.site ?? siteConfig.site_url ?? "http://localhost:4321",
+			customData: `<templateTheme>Aemeath</templateTheme>
+			<templateThemeVersion>${pkg.version}</templateThemeVersion>
+			<templateThemeUrl>${siteConfig.site_url}</templateThemeUrl>
+			<lastBuildDate>${formatDateI18nWithTime(new Date())}</lastBuildDate>`,
 		items: feedItems,
 	});
 }

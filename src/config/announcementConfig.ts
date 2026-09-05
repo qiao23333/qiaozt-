@@ -2,11 +2,11 @@ import type { AnnouncementConfig } from "../types/announcementConfig";
 
 export const announcementConfig: AnnouncementConfig = {
 	// 公告标题
-	title: "📢 欢迎来访者",
+	title: "👋 欢迎来到乌鹊南飞",
 
 	// 公告内容
 	content:
-		"👋🏻 Hi，我是Rain，也是朝朝听雨，欢迎来到我的博客！这里是分享知识、交流想法的地方。希望你能在这里找到有价值的内容！",
+		"这里是乌鹊南飞的个人世界——作品、文章与创作都会慢慢沉淀。正在持续折腾新东西，欢迎常来看看。",
 
 	// 是否允许用户关闭公告
 	closable: true,

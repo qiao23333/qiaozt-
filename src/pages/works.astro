@@ -1,7 +1,97 @@
 ---
 import { Icon } from "astro-icon/components";
 import MainGridLayout from "@/layouts/MainGridLayout.astro";
-import { projects } from "@/config/projectsConfig";
+import { projects as fallbackProjects } from "@/config/projectsConfig";
+
+// 作品的唯一数据来源是你的 GitHub 公开仓库：
+// 新建仓库 → 作品页自动多一张卡片，无需再改样式或配置。
+const GITHUB_USER = "qiao23333";
+
+// 已知仓库的定制展示（名称/简介/图标），不在表里的新仓库会自动用仓库信息生成卡片。
+const repoOverrides: Record<string, { name: string; description: string; icon: string; accent: string; tags: string[] }> = {
+	SnapSort: {
+		name: "SnapSort",
+		description: "图片分类整理工具，让散落无序的素材图按规则批量归类，把整理这件事变简单。",
+		icon: "material-symbols:photo-library",
+		accent: "#8b5cf6",
+		tags: ["工具", "图片整理", "Python"],
+	},
+	"qiaozt-": {
+		name: "乌鹊南飞 · 个人站",
+		description: "本网站：基于 Astro 的个人世界，作品、文章与创作都会沉淀在这里。",
+		icon: "material-symbols:article-rounded",
+		accent: "#06b6d4",
+		tags: ["网站", "Astro", "内容"],
+	},
+};
+
+// 未知语言仓库默认用的图标（内置图标，本地构建无需联网）
+const DEFAULT_ICON = "material-symbols:folder-open-rounded";
+
+const languageTone: Record<string, { accent: string }> = {
+	Python: { accent: "#8b5cf6" },
+	TypeScript: { accent: "#3b82f6" },
+	JavaScript: { accent: "#eab308" },
+	Astro: { accent: "#f97316" },
+	HTML: { accent: "#f97316" },
+	CSS: { accent: "#06b6d4" },
+	Shell: { accent: "#22c55e" },
+};
+type Cards = {
+	name: string;
+	description: string;
+	icon: string;
+	accent: string;
+	tags: string[];
+	githubUrl: string;
+};
+
+let cards: Cards[] = [];
+let fromGitHub = false;
+try {
+	const res = await fetch(
+		`https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=50`,
+		{
+			headers: { "User-Agent": "trae", Accept: "application/vnd.github+json" },
+			signal: AbortSignal.timeout(8000),
+		},
+	);
+	if (res.ok) {
+		const data = (await res.json()) as Array<{
+			name: string;
+			fork: boolean;
+			size: number;
+			description: string | null;
+			language: string | null;
+			html_url: string;
+		}>;
+		const list = data
+			.filter((r) => !r.fork)
+			.filter((r) => r.name && r.name.trim() !== "-")
+			.filter((r) => r.size > 0 || r.description);
+		cards = list.map((r) => {
+			const over = repoOverrides[r.name];
+			const accent =
+				languageTone[r.language ?? ""]?.accent ?? "#06b6d4";
+			return {
+				name: over?.name ?? r.name,
+				description:
+					over?.description ?? (r.description || "一个公开的 GitHub 仓库。"),
+				icon: over?.icon ?? DEFAULT_ICON,
+				accent: over?.accent ?? accent,
+				tags: over?.tags ?? [r.language ?? "GitHub"],
+				githubUrl: r.html_url,
+			};
+		});
+		fromGitHub = cards.length > 0;
+	}
+} catch {
+	// 拉取失败时回退到本地配置
+}
+if (!fromGitHub) {
+	cards = fallbackProjects.map((p) => ({ ...p, githubUrl: p.githubUrl }));
+}
+const projectCount = cards.length;
 ---
 
 <MainGridLayout title="作品" description="我的项目与作品集">
@@ -17,15 +107,15 @@ import { projects } from "@/config/projectsConfig";
 			</div>
 			<div class="works-stats" aria-label="作品统计">
 				<div>
-					<strong>{projects.length}</strong>
+					<strong>{projectCount}</strong>
 					<span>项目</span>
 				</div>
 			</div>
 		</header>
 
 		<div class="works-grid">
-			{
-				projects.map((project) => (
+				{
+					cards.map((project) => (
 					<a
 						class="project-card"
 						href={project.githubUrl}

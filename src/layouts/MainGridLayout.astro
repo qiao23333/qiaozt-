@@ -12,7 +12,6 @@ import FloatingControls from "@/components/controls/FloatingControls.astro";
 import ScrollDownIndicator from "@/components/controls/ScrollDownIndicator.astro";
 import BackgroundPlayer from "@/components/features/BackgroundPlayer.astro";
 import CodeInteractionManager from "@/components/features/CodeInteractionManager.astro";
-import HomePortfolioIntro from "@/components/features/HomePortfolioIntro.astro";
 import TypewriterText from "@/components/features/TypewriterText.astro";
 import AiRecommendationNote from "@/components/common/AiRecommendationNote.astro";
 import CategoryBar from "@/components/layout/CategoryBar.astro";
@@ -357,7 +356,7 @@ const hasMultipleImages =
 </div>
 
 <!-- Wallpaper - 如果允许切换则始终渲染，否则只渲染当前模式 -->
-<HomePortfolioIntro initialHome={isHomePageCheck} />
+<!-- 原作者的鸣潮角色开屏动画已移除（暂无自己的素材）；后续若有开场动画素材可在此重新挂载 HomePortfolioIntro -->
 
 {(isWallpaperSwitchable || isBannerMode || isFullscreenMode || isOverlayMode) && (
 <div id="wallpaper-wrapper" class:list={[

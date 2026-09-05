@@ -18,9 +18,7 @@
   "src:assets/images/MobileWallpaper/m1.webp": "cccce0cbc0d59294c0",
   "public:assets/images/sponsor/wechat.webp": "d5d5d5dad9d7dbd8cf",
   "public:assets/images/sponsor/alipay.webp": "8ebbde91bedf93c0e0",
-  "src:assets/images/rain-avatar.webp": "e2c38ccdb691e6ddd5",
   "public:assets/images/wallpaper/wuthering-waves-youtube-10k.webp": "63759c65739f404b66",
-  "public:assets/images/rain-avatar.webp": "e2c38ccdb691e6ddd5",
   "public:assets/images/wallpaper/wallpaper-24.webp": "d8e4e999a4acbda9af",
   "public:assets/images/wallpaper/wallpaper-23.webp": "e1dce0dfd9dfd7c8cb",
   "public:assets/images/wallpaper/wallpaper-22.webp": "727991b4a5b9e1b5c1",
@@ -168,7 +166,6 @@
   "public:friends/screenshots/xeiu.webp": "39526e4c5b70cbd9e6",
   "public:friends/screenshots/blogroll.webp": "f9f7f4f9f8f5f9f8f5",
   "public:friends/screenshots/whitebear.webp": "fcfcfcfbfbfbfcfcfc",
-  "src:assets/images/chaoc-tingyu-avatar.webp": "f9d5e2f0ccdbe7c0ce",
   "public:assets/images/home-truncated/character-02.webp": "d4d2d9aca3aca1a1a7",
   "public:friends/screenshots/weasel6.webp": "23180d3928194e494b",
   "public:friends/screenshots/0c0.webp": "d0e6dad7e7def3f0f2",
@@ -179,5 +176,7 @@
   "public:assets/images/home-truncated/character-04.webp": "93818aaf949fc6bccb",
   "public:assets/images/home-truncated/character-03.webp": "554e51a097a0aca7b0",
   "public:assets/images/home-truncated/character-01.webp": "8c6e8c9f7a983f3349",
-  "public:friends/screenshots/nanzhiy.webp": "76a6bb87c8e8d9e7ec"
+  "public:friends/screenshots/nanzhiy.webp": "76a6bb87c8e8d9e7ec",
+  "public:assets/images/joe-avatar.png": "cbcbc8c5cac5bcb1ac",
+  "src:assets/images/joe-avatar.png": "cacac6c6cbc6bdb1ab"
 }

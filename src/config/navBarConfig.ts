@@ -76,11 +76,11 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		],
 	});
 
-	// 文档链接
+	// 文档链接（可选）
 	// links.push({
 	// 	name: "文档",
-	// 	url: "https://docs-rainzt.cn",
-	// 	external: true,
+	// 	url: "/posts/",
+	// 	external: false,
 	// 	icon: "material-symbols:docs",
 	// });
 

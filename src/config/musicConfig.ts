@@ -8,7 +8,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	// 2. 导航栏：在本配置文件把showInNavbar设为false禁用即可
 
 	// 是否在导航栏显示音乐播放器入口
-	showInNavbar: true,
+	showInNavbar: false,
 
 	// 使用方式："meting" 使用 Meting API，"local" 使用本地音乐列表
 	mode: "local",
@@ -48,14 +48,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	// 2. 或者直接填入歌词字符串内容
 	// lrc: "[00:00.00]歌词内容...",
 	local: {
-		playlist: [
-			{
-				name: "小小奇迹",
-				artist: "鸣潮先约电台 / jixwang / 飞行雪绒",
-				url: "/assets/music/小小奇迹 - 鸣潮先约电台.mp3",
-				cover: "/assets/music/cover/小小奇迹.webp",
-				lrc: "/assets/music/lrc/小小奇迹 - 鸣潮先约电台.lrc",
-			},
-		],
+		// 音乐歌单暂空：换了自己的站后，原作者歌单已清空。以后想放歌再往这里加。
+		playlist: [],
 	},
 };

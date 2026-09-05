@@ -54,52 +54,38 @@ const changelogEntries = [
 
 const personalProjects = [
 	{
-		title: "Ai 全自动上架",
-		description: "面向跨境电商的批量发布中枢，把表格、图库、视频与店铺流程串成可复盘的自动化链路。",
-		tags: ["AI", "自动化", "跨境电商"],
-		tone: "blue",
-		icon: "material-symbols:auto-awesome-rounded",
-	},
-	{
-		title: "Rain（记账）",
-		description: "一款轻量的个人记账工具，把日常收支、分类和复盘整理成自己的节奏。",
-		tags: ["效率工具", "生活记录"],
-		tone: "mint",
-		icon: "material-symbols:history-rounded",
-	},
-	{
-		title: "Ai 画布智能体",
-		description: "把产品图、提示词、参考风格与生成结果组织进可编排、可追溯的无限画布。",
-		tags: ["AI", "工作流", "图片生成"],
-		tone: "gold",
-		icon: "material-symbols:auto-awesome-rounded",
-	},
-	{
-		title: "个人博客",
-		description: "记录技术实践、工具复盘与生活思考，把做过的事情慢慢整理成可以回看的文字。",
-		tags: ["Astro", "写作", "持续更新"],
+		title: "SnapSort",
+		description: "图片分类整理工具，让散落无序的素材图按规则批量归类，把整理这件事变简单。",
+		tags: ["工具", "图片整理", "Python"],
 		tone: "violet",
-		icon: "material-symbols:edit-note-rounded",
+		icon: "material-symbols:photo-library",
+	},
+	{
+		title: "乌鹊南飞 · 个人站",
+		description: "本网站：基于 Astro 的个人世界，作品、文章与创作都会沉淀在这里。",
+		tags: ["网站", "Astro", "写作"],
+		tone: "cyan",
+		icon: "material-symbols:article-rounded",
 	},
 	{
 		title: "未完待续",
-		description: "小项目比较多，几十个了；还会继续把新的想法做出来，再把它们慢慢收进这里。",
-		tags: ["个人项目", "进行中"],
+		description: "还有更多想法正在落地，会陆续收进作品里，持续更新中。",
+		tags: ["进行中"],
 		tone: "gold",
-		icon: "material-symbols:history-rounded",
+		icon: "material-symbols:history-edu-rounded",
 	},
 ];
 
 const recentActivity = [
 	{
 		kind: "文章",
-		title: "从母系社会到父权制度：亲缘、私有制与现代性别关系的演变",
-		href: "/posts/from-matriarchal-society-to-patriarchy/",
+		title: "SnapSort：把散落的图片整理成秩序",
+		href: "/posts/snapsort-image-org/",
 	},
 	{
-		kind: "文章",
-		title: "朝朝听雨，岁岁有风",
-		href: "/posts/chao-chao-listening-rain-years-wind/",
+		kind: "工具",
+		title: "跨境电商效率工具手记",
+		href: "/posts/e-commerce-tools/",
 	},
 	{
 		kind: "系统",
@@ -108,8 +94,8 @@ const recentActivity = [
 	},
 ];
 
-const interests = ["效率工具", "AI 工程化", "跨境电商", "开源", "网络安全", "逆向工程"];
-const stack = ["React", "TypeScript", "Astro", "ExtendScript", "Shopee", "TikTok", "BigSeller"];
+const interests = ["效率工具", "自动化", "跨境电商", "图片处理", "开源", "AI 工具"];
+const stack = ["Python", "React", "TypeScript", "Astro", "SnapSort", "Markdown", "Git"];
 const serverStatusEndpoint = import.meta.env.DEV ? "/api/server-status.json" : "/api/server-status.php";
 const serverStats = [
 	{
@@ -145,12 +131,12 @@ const serverStats = [
 
 <MainGridLayout title={i18n(I18nKey.about)} description={i18n(I18nKey.about)}>
 	<!--
-		ABOUT DESIGN CONTRACT
-		THESIS: 用 GitHub profile / README 的信息秩序呈现朝朝听雨，而不是再造一个独立的壁纸英雄页。
-		WORLD: 轻量边框、标签、状态行与项目列表；蓝色代表本站，金色代表被认真打磨的项目，薄荷色代表 RSS 连接。
-		FIRST VIEWPORT: 先看到头像、身份、简介与行动入口，再看到 README 标签页与置顶项目。
-		FINISH: 桌面双栏，手机单列；所有项目、友链与朋友圈入口保持可触达。
-	-->
+			ABOUT DESIGN CONTRACT
+			THESIS: 用 GitHub profile / README 的信息秩序呈现乌鹊南飞，而不是再造一个独立的壁纸英雄页。
+			WORLD: 轻量边框、标签、状态行与项目列表；蓝色代表本站，金色代表被认真打磨的项目，薄荷色代表 RSS 连接。
+			FIRST VIEWPORT: 先看到头像、身份、简介与行动入口，再看到 README 标签页与置顶项目。
+			FINISH: 桌面双栏，手机单列；所有项目、友链与朋友圈入口保持可触达。
+		-->
 	<section class="github-profile" aria-labelledby="about-title">
 		<header class="profile-header card-base onload-animation">
 			<div class="profile-header__main">
@@ -166,27 +152,27 @@ const serverStats = [
 				</div>
 				<div class="profile-identity">
 					<div class="profile-kicker">
-						<span class="profile-kicker__dot"></span>
-						<span>PUBLIC PROFILE</span>
-						<span class="profile-kicker__divider">/</span>
-						<span>RAINZT.CN</span>
-					</div>
-					<h1 id="about-title">朝朝听雨</h1>
-					<p class="profile-handle">Rain · 独立开发者 / 博客作者</p>
-					<p class="profile-lead">把真实业务问题，拆成能被工具、文字和时间重新组织的答案。</p>
-					<div class="profile-status" aria-label="当前状态">
-						<span class="profile-status__dot"></span>
-						<span>正在构建效率工具，也在持续写作</span>
+							<span class="profile-kicker__dot"></span>
+							<span>PUBLIC PROFILE</span>
+							<span class="profile-kicker__divider">/</span>
+							<span>WUQUE · JOE</span>
+						</div>
+						<h1 id="about-title">乌鹊南飞</h1>
+						<p class="profile-handle">Joe · 独立开发者</p>
+						<p class="profile-lead">偶尔摆烂、经常偶尔；把想法做成能用的东西。</p>
+						<div class="profile-status" aria-label="当前状态">
+							<span class="profile-status__dot"></span>
+							<span>在做效率工具，也在持续写作</span>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="profile-actions" aria-label="个人主页操作">
-				<a class="profile-action profile-action--primary" href="https://github.com/Jarvis0227" target="_blank" rel="noopener noreferrer">
-					<Icon is:inline name="fa7-brands:github" aria-hidden="true" />
-					<span>查看 GitHub</span>
-					<Icon is:inline name="material-symbols:arrow-outward-rounded" aria-hidden="true" />
-				</a>
+				<div class="profile-actions" aria-label="个人主页操作">
+					<a class="profile-action profile-action--primary" href="https://github.com/qiao23333" target="_blank" rel="noopener noreferrer">
+						<Icon is:inline name="fa7-brands:github" aria-hidden="true" />
+						<span>查看 GitHub</span>
+						<Icon is:inline name="material-symbols:arrow-outward-rounded" aria-hidden="true" />
+					</a>
 				<a class="profile-action" href="/guestbook/">
 					<Icon is:inline name="material-symbols:chat-bubble-outline-rounded" aria-hidden="true" />
 					<span>去留言</span>
@@ -225,7 +211,7 @@ const serverStats = [
 						<span class="profile-panel__meta">公开 · 持续更新</span>
 					</header>
 					<div class="profile-readme__body">
-						<p class="profile-readme__quote">“物物而不物于物，念念而不念于念。”</p>
+						<p class="profile-readme__quote">“月明星稀，乌鹊南飞。把走过的轨迹，写成能反刍的经验。”</p>
 						<Markdown class="profile-markdown">
 							<Content />
 						</Markdown>
@@ -331,10 +317,9 @@ const serverStats = [
 						<h2 id="connect-title">保持联系</h2>
 					</header>
 					<div class="profile-connect-list">
-						<a href="https://github.com/Jarvis0227" target="_blank" rel="noopener noreferrer"><Icon is:inline name="fa7-brands:github" aria-hidden="true" /><span>GitHub</span><Icon class="profile-connect-arrow" is:inline name="material-symbols:arrow-outward-rounded" aria-hidden="true" /></a>
-						<a href="https://space.bilibili.com/473321504" target="_blank" rel="noopener noreferrer"><Icon is:inline name="simple-icons:bilibili" aria-hidden="true" /><span>Bilibili</span><Icon class="profile-connect-arrow" is:inline name="material-symbols:arrow-outward-rounded" aria-hidden="true" /></a>
-						<a href="mailto:1953549196@qq.com"><Icon is:inline name="fa7-solid:envelope" aria-hidden="true" /><span>1953549196@qq.com</span><Icon class="profile-connect-arrow" is:inline name="material-symbols:arrow-outward-rounded" aria-hidden="true" /></a>
-					</div>
+							<a href="https://github.com/qiao23333" target="_blank" rel="noopener noreferrer"><Icon is:inline name="fa7-brands:github" aria-hidden="true" /><span>GitHub</span><Icon class="profile-connect-arrow" is:inline name="material-symbols:arrow-outward-rounded" aria-hidden="true" /></a>
+							<a href="mailto:1162393961@qq.com"><Icon is:inline name="fa7-solid:envelope" aria-hidden="true" /><span>1162393961@qq.com</span><Icon class="profile-connect-arrow" is:inline name="material-symbols:arrow-outward-rounded" aria-hidden="true" /></a>
+						</div>
 				</section>
 
 				<section class="profile-panel profile-side-panel profile-server-panel card-base" aria-labelledby="server-title" data-server-metrics data-server-endpoint={serverStatusEndpoint}>

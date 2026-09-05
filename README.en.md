@@ -30,9 +30,7 @@
 **[简体中文](README.md)** | **[繁體中文](docs/README.zh-TW.md)** | **[English](README.en.md)** | **[日本語](docs/README.ja.md)** | **[Русский](docs/README.ru.md)** 
 
 🚀 Quick Guide:
-[**🖥️Live Demo**](http://rainzt.cn/) /
-[**📝Documentation**](https://docs-rainzt.cn/) /
-[**🍀My Blog**](https://blog.cuteleaf.cn)
+[**🌟乌鹊南飞 · 个人站**](https://github.com/qiao23333/qiaozt-)
 
 ⚡ Static Site Generation: Ultra-fast loading speed and SEO optimization based on Astro
 
@@ -71,7 +69,7 @@
 >
 >Firefly also preserves the original fuwari layout, which can be freely switched in the configuration file according to your preferences.
 >
->**For more layout configurations and demos, please see: [Firefly Layout System Details](http://rainzt.cn/posts/firefly-layout-system/)**
+>**For more layout configurations and demos, please see: [Firefly Layout System Details](https://github.com/CuteLeaf/Firefly)**
 >
 >Firefly supports i18n multilingual UI, but except for Simplified Chinese, other languages are AI-translated. If you find any errors, feel free to submit a [Pull Request](https://github.com/CuteLeaf/Firefly/pulls) to help improve them.
 
@@ -156,7 +154,7 @@ If you have useful features and optimizations, please submit a [Pull Request](ht
 
 ## 📖 Configuration
 
-> 📚 **Detailed Configuration Documentation**: Check [Firefly Documentation](https://docs-rainzt.cn/) for complete configuration guide
+> 📚 **Detailed Configuration Documentation**: Check [Firefly Documentation](https://github.com/CuteLeaf/Firefly) for complete configuration guide
 
 ### Setting Website Language
 
@@ -224,9 +222,9 @@ comment: true    # Enable comments
 
 In addition to the default [GitHub Flavored Markdown](https://github.github.com/gfm/) support in Astro, there are some additional Markdown features:
 
-- Admonitions - Supports configuration for GitHub, Obsidian, VitePress, and Docusaurus themes ([Preview and Usage](http://rainzt.cn/posts/markdown-extended/))
-- GitHub Repository Cards ([Preview and Usage](http://rainzt.cn/posts/markdown-extended/))
-- Enhanced Code Blocks based on Expressive Code ([Preview](http://rainzt.cn/posts/code-examples/) / [Documentation](https://expressive-code.com/))
+- Admonitions - Supports configuration for GitHub, Obsidian, VitePress, and Docusaurus themes ([Preview and Usage](https://github.com/CuteLeaf/Firefly))
+- GitHub Repository Cards ([Preview and Usage](https://github.com/CuteLeaf/Firefly))
+- Enhanced Code Blocks based on Expressive Code ([Preview](https://github.com/CuteLeaf/Firefly) / [Documentation](https://expressive-code.com/))
 
 ## 🧞 Commands
 
