@@ -1,0 +1,23 @@
+---
+import { Icon } from "astro-icon/components";
+import MainGridLayout from "@/layouts/MainGridLayout.astro";
+import { profileConfig } from "@/config";
+
+const now = new Date().toISOString().slice(0, 10);
+---
+
+<MainGridLayout>
+	<div class="card-base px-8 py-12">
+		<div class="flex items-center gap-2 mb-2">
+			<Icon name="material-symbols:work" class="text-2xl" />
+			<h1 class="card-title">求职 / 合作</h1>
+		</div>
+		<p class="mt-4 text-80">
+			这里是「乌鹊南飞」的求职与合作入口。当前个人世界仍在建设中，公开的项目与经历会在这里按招聘者的阅读顺序重新组织。
+		</p>
+		<p class="mt-2 text-muted">
+			你可以通过站内「关于」页或下面的邮箱联系我：{profileConfig.links.find((l) => l.name === "Email")?.url?.replace("copy:", "")}
+		</p>
+		<p class="mt-8 text-sm text-muted">页面状态：占位 · 更新于 {now}</p>
+	</div>
+</MainGridLayout>

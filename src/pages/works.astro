@@ -1,0 +1,21 @@
+---
+import { Icon } from "astro-icon/components";
+import MainGridLayout from "@/layouts/MainGridLayout.astro";
+---
+<MainGridLayout>
+	<div class="card-base px-8 py-12">
+		<div class="flex items-center gap-2">
+			<Icon name="material-symbols:folder" class="text-2xl" />
+			<h1 class="text-2xl font-bold">作品 / 项目</h1>
+		</div>
+		<p class="mt-4">这里收录我做的产品、工具与作品，内容正在整理中。</p>
+		<div class="card-base px-6 py-4 mt-6">
+			<div class="flex items-center gap-2 font-semibold">
+				<Icon name="material-symbols:photo-library" />
+				<span>SnapSort · 图片分类整理工具</span>
+			</div>
+			<p class="mt-2 text-sm">旗舰项目。案例（背景 / 过程 / 判断 / 结果 / 限制）待整理后补充。</p>
+		</div>
+		<p class="mt-8 text-sm">本页为占位，项目案例会在整理、脱敏后补充。</p>
+	</div>
+</MainGridLayout>
