@@ -51,19 +51,19 @@ export const siteConfig: SiteConfig = {
 	// Favicon 配置
 	favicon: [
 		{
-			src: "/favicon/chaoc-tingyu-avatar-512.png?v=20260823",
+			src: "/favicon/favicon-512.png?v=20260905",
 			sizes: "512x512",
 		},
 		{
-			src: "/favicon/chaoc-tingyu-avatar-192.png?v=20260823",
+			src: "/favicon/favicon-192.png?v=20260905",
 			sizes: "192x192",
 		},
 		{
-			src: "/favicon/chaoc-tingyu-avatar-180.png?v=20260823",
+			src: "/favicon/favicon-180.png?v=20260905",
 			sizes: "180x180",
 		},
 		{
-			src: "/favicon/chaoc-tingyu-avatar-32.png?v=20260823",
+			src: "/favicon/favicon-32.png?v=20260905",
 			sizes: "32x32",
 		},
 	],
@@ -78,7 +78,7 @@ export const siteConfig: SiteConfig = {
 		// 4. 网络图片: { type: "url", value: "https://example.com/logo.png", alt: "Logo" }
 		logo: {
 			type: "image",
-			value: "assets/images/chaoc-tingyu-avatar.webp",
+			value: "assets/images/joe-avatar.png",
 			alt: "乌鹊南飞",
 		},
 		// 导航栏标题
