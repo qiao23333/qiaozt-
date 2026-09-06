@@ -118,8 +118,8 @@ pinned: false（true = 置顶）
 | 站点头像 | `src/assets/images/joe-avatar.png` | 正方形 1:1，≥600×600，PNG |
 | favicon | `public/favicon/` | 已从头像生成全套（512~16 + dark/light + .ico），换头像后需重新生成 |
 | 文章封面 | 文章 frontmatter 的 `image` 字段 | 建议 16:9 或 3:2，≥1200px 宽 |
-| 桌面壁纸 | `src/assets/images/DesktopWallpaper/` | WebP，1920×1080 起 |
-| 手机壁纸 | `src/assets/images/MobileWallpaper/` | WebP，竖屏比例 |
+| 壁纸（在用库） | `public/assets/images/wallpaper/` | WebP，1920×1080 起；加图后到 `backgroundWallpaper.ts` 数组里追加文件名 |
+| 壁纸（示例图，非在用） | `src/assets/images/DesktopWallpaper/`、`MobileWallpaper/` | 主题自带示例，不影响线上 |
 | 相册照片 | `public/gallery/<相册id>/` | 任意常见格式，建议长边 ≥1200px |
 
 ---
