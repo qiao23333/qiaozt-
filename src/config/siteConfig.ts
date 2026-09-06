@@ -15,8 +15,8 @@ export const siteConfig: SiteConfig = {
 	themeVersion: "V1.1.1",
 
 	// 站点 URL
-	// TODO: 部署后替换为你的正式域名
-	site_url: "https://your-site.com",
+	// 线上地址：Cloudflare Pages 自动部署；以后绑定自定义域名时改这里
+	site_url: "https://qiaozt.pages.dev",
 
 	// 站点描述
 	description:
